@@ -24,6 +24,7 @@ GTZAN Music Genre Dataset
 65.02%
 # Test Accuracy: 
 48.0%
+
 The LSTM model used in this project shows promising results, though there is room for improvement in its performance.
 # Usage
 # Register and Log In: 
