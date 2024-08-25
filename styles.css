@@ -1,0 +1,288 @@
+/* Front Page Styles */
+/* Import the Funky Font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://img.freepik.com/premium-photo/picture-phone-with-headphones-screen_1189844-12922.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    font-family: 'Press Start 2P', cursive;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.input-group input {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Front Page Styles */
+.front-page-container {
+    position: relative;
+    height: 100vh;
+    background: url('https://img.freepik.com/premium-photo/picture-phone-with-headphones-screen_1189844-12922.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #91DDCF;
+}
+
+.content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #03AED2;
+}
+
+/* Reuse the login button style */
+.content .login-button {
+    width: 200px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #91DDCF;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.content .login-button:hover {
+    background-color: #971762;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('https://st5.depositphotos.com/2673929/66027/i/450/depositphotos_660275146-stock-photo-speaker-headphones-colorful-notes-purple.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Box */
+.login-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FEC7B4;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #e986a4;
+}
+
+/* Signup Link */
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #b662af;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Upload Page Styles */
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://img.freepik.com/free-psd/music-instruments-sales-podium-background_23-2150928056.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.upload-box {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.upload-box h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.input-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+.upload-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFDFDF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.upload-button:hover {
+    background-color: #F875AA;
+}
+
+/* Styles for the pop-up */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #e2a0c9;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.popup-content p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #af39b9;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #143f9b;
+}
