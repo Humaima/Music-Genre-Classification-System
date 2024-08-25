@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Music - Genre Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        // Function to display a pop-up with the genre
+        function showGenre(genre) {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.innerHTML = `
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <p>Predicted Genre: ${genre}</p>
+                </div>
+            `;
+            document.body.appendChild(popup);
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            document.querySelector('.popup').remove();
+        }
+
+        // Function to handle form submission via AJAX
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                // Check if the response is JSON
+                const contentType = response.headers.get('Content-Type');
+                if (contentType && contentType.includes('application/json')) {
+                    const result = await response.json();
+                    if (response.ok) {
+                        showGenre(result.predicted_genre);
+                    } else {
+                        showGenre(`Error: ${result.error}`);
+                    }
+                } else {
+                    showGenre(`Error: Unexpected response format`);
+                }
+            } catch (error) {
+                showGenre(`Error: ${error.message}`);
+            }
+        }
+
+        // Add event listener to the form
+        window.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('uploadForm');
+            form.addEventListener('submit', handleFormSubmit);
+        });
+    </script>
+</head>
+<body>
+    <div class="upload-container">
+        <div class="upload-box">
+            <h1>Upload Your Music</h1>
+            <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="file">Choose an audio file:</label>
+                    <input type="file" id="file" name="file" accept=".wav,.mp3,.au" required>
+                </div>
+                <button type="submit" class="upload-button">Classify Genre</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
